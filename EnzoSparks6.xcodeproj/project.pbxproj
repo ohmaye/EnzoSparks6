@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F742CEB81979F2660087DE4D /* SparkParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = F742CEB61979F2660087DE4D /* SparkParticle.sks */; };
+		F742CEB91979F2660087DE4D /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = F742CEB71979F2660087DE4D /* spark.png */; };
 		F783038D1979E231008A0581 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F783038C1979E231008A0581 /* AppDelegate.swift */; };
 		F783038F1979E231008A0581 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F783038E1979E231008A0581 /* GameScene.sks */; };
 		F78303911979E231008A0581 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78303901979E231008A0581 /* GameScene.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F742CEB61979F2660087DE4D /* SparkParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkParticle.sks; sourceTree = "<group>"; };
+		F742CEB71979F2660087DE4D /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		F78303871979E231008A0581 /* EnzoSparks6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnzoSparks6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F783038B1979E231008A0581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F783038C1979E231008A0581 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +62,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F742CEB51979F23A0087DE4D /* Emitters */ = {
+			isa = PBXGroup;
+			children = (
+				F742CEB61979F2660087DE4D /* SparkParticle.sks */,
+				F742CEB71979F2660087DE4D /* spark.png */,
+			);
+			name = Emitters;
+			sourceTree = "<group>";
+		};
 		F783037E1979E231008A0581 = {
 			isa = PBXGroup;
 			children = (
+				F742CEB51979F23A0087DE4D /* Emitters */,
 				F78303891979E231008A0581 /* EnzoSparks6 */,
 				F78303A01979E231008A0581 /* EnzoSparks6Tests */,
 				F78303881979E231008A0581 /* Products */,
@@ -195,7 +209,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F742CEB91979F2660087DE4D /* spark.png in Resources */,
 				F78303981979E231008A0581 /* Images.xcassets in Resources */,
+				F742CEB81979F2660087DE4D /* SparkParticle.sks in Resources */,
 				F783038F1979E231008A0581 /* GameScene.sks in Resources */,
 				F78303961979E231008A0581 /* Main.storyboard in Resources */,
 			);
@@ -405,6 +421,7 @@
 				F78303A91979E231008A0581 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F78303AA1979E231008A0581 /* Build configuration list for PBXNativeTarget "EnzoSparks6Tests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +430,7 @@
 				F78303AC1979E231008A0581 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
