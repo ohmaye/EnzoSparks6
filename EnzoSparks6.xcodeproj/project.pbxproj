@@ -42,6 +42,7 @@
 		F783039D1979E231008A0581 /* EnzoSparks6Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EnzoSparks6Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78303A21979E231008A0581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F78303A31979E231008A0581 /* EnzoSparks6Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnzoSparks6Tests.swift; sourceTree = "<group>"; };
+		F7D7D37E197B5A2400EE9E3F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +101,7 @@
 				F78303941979E231008A0581 /* Main.storyboard */,
 				F78303971979E231008A0581 /* Images.xcassets */,
 				F783038A1979E231008A0581 /* Supporting Files */,
+				F7D7D37E197B5A2400EE9E3F /* MyPlayground.playground */,
 			);
 			path = EnzoSparks6;
 			sourceTree = "<group>";

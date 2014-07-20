@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-extension SKEmitterNode {
+extension SKShapeNode {
     func grow() {
         self.removeAllActions()
         let action1 = SKAction.scaleBy(2.0, duration: 0.5)
@@ -29,21 +29,36 @@ class GameScene: SKScene {
         backgroundColor = SKColor.blackColor()
     }
     
+    /*
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
         
         for touch: AnyObject in touches! {
             let location = touch.locationInNode(self)
-            if let node = nodeAtPoint(location) as? SKEmitterNode {
+            if let node = nodeAtPoint(location) as? SKShapeNode {
                 // If an emitter was touched, then grow it.
-                node.grow()
+                //node.grow()
+                moveEmitter( location )
             } else {
                 // If not, then create one.
                 addEmitter(location)
             }
         }
     }
+    */
     
-    
+    func moveEmitter( location : CGPoint ) {
+        let point = convertPointFromView(location)
+        
+        if let node = nodeAtPoint( point ) as? SKShapeNode {
+            node.removeAllActions()
+            node.position = point
+            let action1 = SKAction.waitForDuration(2.0)
+            let action2 = SKAction.removeFromParent()
+            let actions = SKAction.sequence([action1, action2])
+            node.runAction(actions)
+            
+        }
+    }
 
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
@@ -59,12 +74,16 @@ class GameScene: SKScene {
     
     func addEmitter(location: CGPoint) {
         if let emit = loadNode("SparkParticle") as? SKEmitterNode {
-            emit.position = location
+            let node = SKShapeNode(circleOfRadius: 30)
+            node.position = location
+            node.addChild(emit)
+            emit.position = CGPoint(x: 0, y: 0)
+            emit.targetNode = self
             let action1 = SKAction.waitForDuration(2.0)
             let action2 = SKAction.removeFromParent()
             let actions = SKAction.sequence([action1, action2])
-            emit.runAction(actions)
-            self.addChild(emit)
+            node.runAction(actions)
+            self.addChild(node)
         }
     }
 
